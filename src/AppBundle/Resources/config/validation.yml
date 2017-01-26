@@ -1,0 +1,41 @@
+AppBundle\Entity\Post:
+    properties:
+        title:
+            - NotBlank: ~
+            - Type: string
+        content:
+            - NotBlank: ~
+            - Type: string
+
+AppBundle\Entity\User:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        firstname:
+            - Type: string
+        lastname:
+            - Type: string
+        email:
+            - NotBlank: ~
+            - Email: ~
+        password:
+            - NotBlank: ~
+            - Type: string
+        imgurl:
+            - Type: string
+
+AppBundle\Entity\Comment:
+    properties:
+        text:
+            - NotBlank: ~
+            - Type: string
+        upvote:
+            - NotNull: ~
+            - Type: numeric
+            - GreaterThanOrEqual:
+                value: 0
+        downvote:
+            - NotNull: ~
+            - Type: numeric
+            - GreaterThanOrEqual:
+                value: 0

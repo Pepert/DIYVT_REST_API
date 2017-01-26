@@ -1,0 +1,61 @@
+AppBundle\Entity\Post:
+    attributes:
+        id:
+            groups: ['post', 'comment', 'user']
+        title:
+            groups: ['post', 'comment', 'user']
+        content:
+            groups: ['post', 'comment', 'user']
+        date:
+            groups: ['post', 'comment', 'user']
+        category:
+            groups: ['post', 'comment', 'user']
+        subcategory:
+            groups: ['post', 'comment', 'user']
+        subcategory:
+            groups: ['post', 'comment', 'user']
+        srcUrls:
+            groups: ['post', 'comment', 'user']
+        links:
+            groups: ['post']
+        user:
+            groups: ['post']
+
+
+AppBundle\Entity\Comment:
+    attributes:
+        id:
+            groups: ['post', 'comment', 'user']
+        text:
+            groups: ['post', 'comment', 'user']
+        upvote:
+            groups: ['post', 'comment', 'user']
+        downvote:
+            groups: ['post', 'comment', 'user']
+        date:
+            groups: ['post', 'comment', 'user']
+        user:
+            groups: ['comment', 'post']
+        post:
+            groups: ['comment']
+
+AppBundle\Entity\User:
+    attributes:
+        id:
+            groups: ['post', 'comment', 'user']
+        firstname:
+            groups: ['post', 'comment', 'user']
+        lastname:
+            groups: ['post', 'comment', 'user']
+        email:
+            groups: ['post', 'comment', 'user']
+        password:
+            groups: ['post', 'comment', 'user']
+        imgurl:
+            groups: ['post', 'comment', 'user']
+        screenName:
+            groups: ['post', 'comment', 'user']
+        posts:
+            groups: ['user']
+        comments:
+            groups: ['user']

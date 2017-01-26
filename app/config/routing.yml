@@ -1,0 +1,15 @@
+app:
+    resource: "@AppBundle/Controller/DefaultController.php"
+    type:     annotation
+
+posts:
+    type:     rest
+    resource: AppBundle\Controller\PostController
+
+comments:
+    type:     rest
+    resource: AppBundle\Controller\Post\CommentController
+
+users:
+    type:     rest
+    resource: AppBundle\Controller\UserController
